@@ -1,4 +1,3 @@
-
 //import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import UserHome from "./pages/UserHome";
@@ -10,9 +9,6 @@ import AdminOrders from "./pages/AdminOrders";
 import UserSettings from "./pages/UserSettings";
 //import {user} from "./pages/UserSettings"
 import React, { useState, useEffect } from "react";
-
-
-
 
 function App() {
   // const [user, setUser] = useState(null);

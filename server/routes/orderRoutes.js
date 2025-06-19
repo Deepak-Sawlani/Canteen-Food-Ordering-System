@@ -1,60 +1,6 @@
-// const express = require("express");
-// const router = express.Router();
-// const Order = require("../models/Order");
-
-// router.post("/", async (req, res) => {
-//   const order = new Order(req.body);
-//   await order.save();
-//   res.json({ message: "Order placed" });
-// });
-
-// router.get("/", async (req, res) => {
-//   const orders = await Order.find();
-//   res.json(orders);
-// });
-
-// router.put("/:id", async (req, res) => {
-//   await Order.findByIdAndUpdate(req.params.id, { status: req.body.status });
-//   res.json({ message: "Order updated" });
-// });
-
-// module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const express = require("express");
 const router = express.Router();
 const Order = require("../models/Order");
-
-// Route 1: Place a new order
-// router.post("/", async (req, res) => {
-//   const { items } = req.body;
-
-//   const newOrder = new Order({
-//     userId: "default-user", // This is a hardcoded user ID for now
-//     items,
-//     status: "Placed",
-//   });
-
-//   await newOrder.save();
-//   res.json({ success: true });
-// });
-
 
 
 router.get("/", async (req, res) => {
@@ -67,21 +13,6 @@ router.get("/", async (req, res) => {
 });
 
 module.exports = router;
-
-// router.post("/", async (req, res) => {
-//   const { name, email, items } = req.body;
-
-//   const newOrder = new Order({
-//     name,
-//     email,
-//     items,
-//     status: "Placed",
-//   });
-
-//   await newOrder.save();
-//   res.json({ success: true });
-// });
-
 
 
 router.post("/", async (req, res) => {
