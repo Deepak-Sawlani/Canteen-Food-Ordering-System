@@ -37,7 +37,7 @@ function UserHome() {
   const user = getUser();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/menu").then((res) => {
+    axios.get("/api/menu").then((res) => {
       setMenu(res.data);
     });
 
@@ -121,7 +121,7 @@ const placeOrder = () => {
     document.body.removeChild(confirmBox);
 
     axios
-      .post("http://localhost:5000/api/order", {
+      .post("/api/order", {
         name: user.name,
         email: user.email,
         mobile: user.mobile,

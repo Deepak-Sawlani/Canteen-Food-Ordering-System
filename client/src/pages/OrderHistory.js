@@ -6,7 +6,7 @@ function OrderHistory() {
   const userId = "default-user"; // You can replace this with actual login-based userId
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/orders/${userId}`).then((res) => {
+    axios.get(`/api/orders/${userId}`).then((res) => {
       setOrders(res.data);
     });
   }, []);

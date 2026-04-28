@@ -16,7 +16,7 @@ const UserOrders = () => {
     }
 
     axios
-      .get("http://localhost:5000/api/order")
+      .get("/api/order")
       .then((res) => {
         const userOrders = res.data.filter((order) => order.email === user.email);
         setOrders(userOrders);
@@ -95,7 +95,7 @@ orders.map((order, idx) => {
   const cancelOrder = () => {
     if (window.confirm("Are you sure you want to cancel this order?")) {
       axios
-        .put(`http://localhost:5000/api/order/cancel/${order._id}`)
+        .put(`/api/order/cancel/${order._id}`)
         .then(() => {
           alert("Order cancelled successfully.");
           setOrders((prev) =>

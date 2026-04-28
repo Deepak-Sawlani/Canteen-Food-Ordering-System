@@ -8,7 +8,7 @@ function AdminOrders() {
 
   useEffect(() => {
     const fetchOrders = () => {
-      axios.get("http://localhost:5000/api/order")
+      axios.get("/api/order")
         .then((res) => setOrders(res.data))
         .catch((err) => console.error("Error fetching orders:", err));
     };

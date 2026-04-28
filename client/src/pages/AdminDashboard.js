@@ -11,13 +11,13 @@ function AdminDashboard() {
   }, []);
 
   const fetchOrders = () => {
-    axios.get("http://localhost:5000/api/order").then((res) => {
+    axios.get("/api/order").then((res) => {
       setOrders(res.data);
     });
   };
 
   const confirmOrder = (id) => {
-    axios.put(`http://localhost:5000/api/order/${id}`, { status: "Confirmed" }).then(fetchOrders);
+    axios.put(`/api/order/${id}`, { status: "Confirmed" }).then(fetchOrders);
   };
 
   const addMenuItem = () => {
@@ -26,7 +26,7 @@ function AdminDashboard() {
       return;
     }
 
-    axios.post("http://localhost:5000/api/menu", menuItem).then(() => {
+    axios.post("/api/menu", menuItem).then(() => {
       alert("Item added");
       setMenuItem({ name: "", price: "", description: "" });
     });
