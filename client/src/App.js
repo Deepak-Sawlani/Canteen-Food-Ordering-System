@@ -6,7 +6,7 @@ import { getUser } from "./utils/auth";
 import UserOrders from "./pages/UserOrders"; // adjust path if needed
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminOrders from "./pages/AdminOrders";
-import UserSettings from "./pages/UserSettings";
+//import UserSettings from "./pages/UserSettings";
 //import {user} from "./pages/UserSettings"
 import React, { useState, useEffect } from "react";
 
@@ -24,9 +24,9 @@ function App() {
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/user" element={<UserHome user={user}/>} />
         <Route path="/orders" element={<UserOrders />} />
-         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/orders" element={<AdminOrders />} />
-        <Route path="/settings" element={<UserSettings user={user} setUser={setUser} />} />
+        {/* <Route path="/settings" element={<UserSettings user={user} setUser={setUser} />} /> */}
       </Routes>
     </Router>
   );
