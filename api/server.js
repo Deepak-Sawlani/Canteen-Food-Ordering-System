@@ -6,7 +6,7 @@ const userRoutes = require("./routes/UserRoutes");
 
 const app = express();
 app.use(cors({
-    origin: "https://canteen-food-ordering-system-dejc.vercel.app",  // Yahan apna Vercel link paste karein
+    origin: "*",  // Yahan apna Vercel link paste karein
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
