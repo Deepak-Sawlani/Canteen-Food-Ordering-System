@@ -11,13 +11,13 @@ function AdminDashboard() {
   }, []);
 
   const fetchOrders = () => {
-    axios.get("/api/order").then((res) => {
+    axios.get("https://canteen-food-ordering-system-midh.onrender.com/api/order").then((res) => {
       setOrders(res.data);
     });
   };
 
   const confirmOrder = (id) => {
-    axios.put(`/api/order/${id}`, { status: "Confirmed" }).then(fetchOrders);
+    axios.put(`https://canteen-food-ordering-system-midh.onrender.com/api/order/${id}`, { status: "Confirmed" }).then(fetchOrders);
   };
 
   const addMenuItem = () => {
@@ -26,7 +26,7 @@ function AdminDashboard() {
       return;
     }
 
-    axios.post("/api/menu", menuItem).then(() => {
+    axios.post("https://canteen-food-ordering-system-midh.onrender.com/api/menu", menuItem).then(() => {
       alert("Item added");
       setMenuItem({ name: "", price: "", description: "" });
     });

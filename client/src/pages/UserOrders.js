@@ -16,7 +16,7 @@ const UserOrders = () => {
     }
 
     axios
-      .get("/api/order")
+      .get("https://canteen-food-ordering-system-midh.onrender.com/api/order")
       .then((res) => {
         const userOrders = res.data.filter((order) => order.email === user.email);
         setOrders(userOrders);
@@ -95,7 +95,7 @@ orders.map((order, idx) => {
   const cancelOrder = () => {
     if (window.confirm("Are you sure you want to cancel this order?")) {
       axios
-        .put(`/api/order/cancel/${order._id}`)
+        .put(`https://canteen-food-ordering-system-midh.onrender.com/api/order/cancel/${order._id}`)
         .then(() => {
           alert("Order cancelled successfully.");
           setOrders((prev) =>

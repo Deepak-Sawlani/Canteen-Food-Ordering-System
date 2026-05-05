@@ -37,7 +37,7 @@ function UserHome() {
   const user = getUser();
 
   useEffect(() => {
-    axios.get("/api/menu").then((res) => {
+    axios.get("https://canteen-food-ordering-system-midh.onrender.com/api/menu").then((res) => {
       setMenu(res.data);
     });
 
@@ -121,7 +121,7 @@ const placeOrder = () => {
     document.body.removeChild(confirmBox);
 
     axios
-      .post("/api/order", {
+      .post("https://canteen-food-ordering-system-midh.onrender.com/api/order", {
         name: user.name,
         email: user.email,
         mobile: user.mobile,

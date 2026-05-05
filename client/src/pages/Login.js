@@ -16,7 +16,7 @@ function Login({ setUser }) {
     }
 
     try {
-      const res = await axios.post("/api/user/login", {
+      const res = await axios.post("https://canteen-food-ordering-system-midh.onrender.com/api/user/login", {
         name,
         email,
         address,

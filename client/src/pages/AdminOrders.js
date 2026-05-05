@@ -8,7 +8,7 @@ function AdminOrders() {
 
   useEffect(() => {
     const fetchOrders = () => {
-      axios.get("/api/order")
+      axios.get("https://canteen-food-ordering-system-midh.onrender.com/api/order")
         .then((res) => setOrders(res.data))
         .catch((err) => console.error("Error fetching orders:", err));
     };

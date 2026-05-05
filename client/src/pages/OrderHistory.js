@@ -6,7 +6,7 @@ function OrderHistory() {
   const userId = "default-user"; // You can replace this with actual login-based userId
 
   useEffect(() => {
-    axios.get(`/api/orders/${userId}`).then((res) => {
+    axios.get(`https://canteen-food-ordering-system-midh.onrender.com/api/orders/${userId}`).then((res) => {
       setOrders(res.data);
     });
   }, []);
