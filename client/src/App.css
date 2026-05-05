@@ -1,18 +1,18 @@
-body {
+ /* body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   background-attachment: fixed; /* Taaki scroll karne par background move na ho */
-  min-height: 100vh;
-  color: white; /* Agar text dark hai toh ise light kar dein */
-}
+  /* min-height: 100vh;
+  color: white;   Agar text dark hai toh ise light kar dein  
+}  */ 
 
-/* body {
+body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #FF5349;
   margin: 0;
   padding: 0;
-} */
+}
 
 h1, h2,h4 {
   color: #FFFFFF;
