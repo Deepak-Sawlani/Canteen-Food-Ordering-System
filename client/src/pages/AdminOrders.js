@@ -127,3 +127,93 @@ function AdminOrders() {
 }
 
 export default AdminOrders;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
+// import "./../App.css";
+
+// function AdminDashboard() {
+//   const [orders, setOrders] = useState([]);
+//   const [menuItem, setMenuItem] = useState({ name: "", price: "", description: "", image: "" });
+
+//   useEffect(() => {
+//     fetchOrders();
+//   }, []);
+
+//   const fetchOrders = () => {
+//     axios.get("https://onrender.com").then((res) => {
+//       setOrders(res.data);
+//     });
+//   };
+
+//   // Image ko select karke Base64 string mein convert karne ka logic
+//   const handleImageChange = (e) => {
+//     const file = e.target.files[0];
+//     if (file) {
+//       const reader = new FileReader();
+//       reader.onloadend = () => {
+//         setMenuItem({ ...menuItem, image: reader.result }); // Image string state mein save
+//       };
+//       reader.readAsDataURL(file);
+//     }
+//   };
+
+//   const addMenuItem = () => {
+//     if (!menuItem.name || !menuItem.price || !menuItem.image) {
+//       alert("Please fill all fields and select an image");
+//       return;
+//     }
+//     axios.post("https://onrender.com", menuItem).then(() => {
+//       alert("Item added successfully!");
+//       setMenuItem({ name: "", price: "", description: "", image: "" });
+//     }).catch(err => alert("Error adding item: " + err.message));
+//   };
+
+//   return (
+//     <div>
+//       <h1>Admin Panel</h1>
+//       <h2>Add Menu Item</h2>
+//       <div className="center-container">
+//         <div className="form-box">
+//           <input type="text" placeholder="Name" value={menuItem.name} onChange={(e) => setMenuItem({ ...menuItem, name: e.target.value })} />
+//           <input type="number" placeholder="Price" value={menuItem.price} onChange={(e) => setMenuItem({ ...menuItem, price: e.target.value })} />
+//           <input type="text" placeholder="Description" value={menuItem.description} onChange={(e) => setMenuItem({ ...menuItem, description: e.target.value })} />
+          
+//           {/* Image Upload Input */}
+//           <label style={{marginTop: "10px", display: "block", fontSize: "14px"}}>Select Food Image:</label>
+//           <input type="file" accept="image/*" onChange={handleImageChange} style={{marginBottom: "10px"}} />
+          
+//           {/* Choti Preview Image */}
+//           {menuItem.image && (
+//             <div style={{textAlign: "center", marginBottom: "10px"}}>
+//               <img src={menuItem.image} alt="Preview" style={{width: "80px", height: "80px", borderRadius: "5px", objectFit: "cover"}} />
+//             </div>
+//           )}
+
+//           <button onClick={addMenuItem}>Add Item</button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default AdminDashboard;
